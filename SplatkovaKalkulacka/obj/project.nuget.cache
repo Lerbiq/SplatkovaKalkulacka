@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q7EAQj8VIN7cMXnpZP1dvY/aeQw01DTGfkdum00GaPcuJstXKgjd04gpg+aVpxXs8hac8Pj/EW4R4dF8inrXzw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\d_macalik\\OneDrive - Univerzita Tomáše Bati ve Zlíně\\Dokumenty\\RiderProjects\\SplatkovaKalkulacka\\SplatkovaKalkulacka\\SplatkovaKalkulacka.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\d_macalik\\.nuget\\packages\\spectre.console\\0.43.0\\spectre.console.0.43.0.nupkg.sha512"
+  ],
+  "logs": []
+}

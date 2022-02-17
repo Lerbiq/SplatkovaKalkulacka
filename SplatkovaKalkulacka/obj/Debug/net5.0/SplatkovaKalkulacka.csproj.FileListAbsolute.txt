@@ -1,0 +1,34 @@
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.exe
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.deps.json
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.runtimeconfig.json
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.runtimeconfig.dev.json
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.dll
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\ref\SplatkovaKalkulacka.dll
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.pdb
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\Spectre.Console.dll
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.csproj.AssemblyReference.cache
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.AssemblyInfoInputs.cache
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.AssemblyInfo.cs
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.csproj.CoreCompileInputs.cache
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.dll
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\ref\SplatkovaKalkulacka.dll
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.pdb
+C:\Users\d_macalik\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.genruntimeconfig.cache
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.exe
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.deps.json
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.runtimeconfig.json
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.runtimeconfig.dev.json
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.dll
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\ref\SplatkovaKalkulacka.dll
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\SplatkovaKalkulacka.pdb
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\bin\Debug\net5.0\Spectre.Console.dll
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.csproj.AssemblyReference.cache
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.AssemblyInfoInputs.cache
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.AssemblyInfo.cs
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.csproj.CoreCompileInputs.cache
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.dll
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\ref\SplatkovaKalkulacka.dll
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.pdb
+C:\Users\d_macalik\OneDrive - Univerzita Tomáše Bati ve Zlíně\Dokumenty\RiderProjects\SplatkovaKalkulacka\SplatkovaKalkulacka\obj\Debug\net5.0\SplatkovaKalkulacka.genruntimeconfig.cache
