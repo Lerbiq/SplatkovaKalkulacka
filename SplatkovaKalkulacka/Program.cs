@@ -202,8 +202,13 @@ namespace SplatkovaKalkulacka
             return Action.Quit;
         }
 
-        static void UpdateTable(int owed, int years, double interest)
+        public static void UpdateTable(int owed, int years, double interest)
         {
+            if (owed == 0)
+            {
+                throw new ArgumentOutOfRangeException("Vyse pujcky musi byt kladna");
+            }
+            
             _innerTable.UpdateCell(0, 0, owed + " Kc");
             _innerTable.UpdateCell(0, 1, years.ToString());
             _innerTable.UpdateCell(0, 2, interest + "%");
