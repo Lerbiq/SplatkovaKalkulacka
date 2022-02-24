@@ -16,6 +16,7 @@ namespace TestKalkulacka
         [Fact]
         public void Splatka_NulovyDluh_Vyjimka()
         {
+            //TODO: Fix unti tests
             Assert.Throws<ArgumentOutOfRangeException>(() => SplatkovaKalkulacka.Kalkulacka.UpdateTable(0, 0, 0));
         }
     }

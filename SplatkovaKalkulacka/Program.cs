@@ -5,40 +5,29 @@ namespace SplatkovaKalkulacka
 {
     public class Kalkulacka
     {
-        private static Table _table = null;
-        private static Table _innerTable = null;
+        public static CalcResult LastResult;
         
         static void Main()
         {
-            AnsiConsole.Clear();
-            _table = new Table();
-            _table.AddColumn(new TableColumn("Splatkova Kalkulacka"));
-
-            _innerTable = new Table();
-            _innerTable.AddColumn(new TableColumn("[blue]Vyse Pujcky[/]").Centered());
-            _innerTable.AddColumn(new TableColumn("[green]Pocet Let Splaceni[/]").Centered());
-            _innerTable.AddColumn(new TableColumn("[fuchsia]Vyse uroku[/]").Centered());
-            _innerTable.AddColumn(new TableColumn("[bold aqua]Mesicni[/] [aqua]Splatka[/]").Centered());
-            _innerTable.AddColumn(new TableColumn("[bold aqua]Celkova[/] [aqua]Splatka[/]").Centered());
-            _innerTable.AddRow("0", "0", "0", "-", "-");
-            _innerTable.Border(TableBorder.Rounded);
-
-            _table.AddRow(_innerTable);
-            _table.Border(TableBorder.Rounded);
-
-            AnsiConsole.Write(_table);
+            //TODO: Ask for path
+            string path = ".\\hypoteky.txt";
+            
+            TableUi tableUi = new TableUi();
+            tableUi.WriteTable();
 
             var owed = GetOwed();
-            UpdateTable(owed, 0, 0);
-
+            tableUi.UpdateValues(owed, 0, 0);
+            tableUi.UpdateTable();
 
             var years = GetYears();
-            UpdateTable(owed, years, 0);
+            tableUi.UpdateValues(owed, years, 0);
+            tableUi.UpdateTable();
 
             var interest = GetInterest();
-            UpdateTable(owed, years, interest);
-            
-            
+            tableUi.UpdateValues(owed, years, interest);
+            tableUi.UpdateTable();
+
+
             bool quit = false;
 
             while (quit != true)
@@ -50,19 +39,27 @@ namespace SplatkovaKalkulacka
                     case Action.ChangeOwed:
                     {
                         owed = GetOwed();
-                        UpdateTable(owed, years, interest);
+                        tableUi.UpdateValues(owed, years, interest);
+                        tableUi.UpdateTable();
                         break;
                     }
                     case Action.ChangeYears:
                     {
                         years = GetYears();
-                        UpdateTable(owed, years, interest);
+                        tableUi.UpdateValues(owed, years, interest);
+                        tableUi.UpdateTable();
                         break;
                     }
                     case Action.ChangeInterest:
                     {
                         interest = GetInterest();
-                        UpdateTable(owed, years, interest);
+                        tableUi.UpdateValues(owed, years, interest);
+                        tableUi.UpdateTable();
+                        break;
+                    }
+                    case Action.Save:
+                    {
+                        FileUtil.WriteToFile(path, LastResult);
                         break;
                     }
                     case Action.Quit:
@@ -129,25 +126,27 @@ namespace SplatkovaKalkulacka
                         };
                     }));
         }
-        
+
         static Action GetAction()
         {
             if (!AnsiConsole.Profile.Capabilities.Ansi)
             {
                 var action = AnsiConsole.Prompt(
-                    new TextPrompt<int>("1. Zmenit vysi pujcky\n2. Zmenit pocet let splaceni\n3. Zmenit vysi uroku\n0. Ukoncit\n Vyber akci:")
+                    new TextPrompt<int>(
+                            "1. Zmenit vysi pujcky\n2. Zmenit pocet let splaceni\n3. Zmenit vysi uroku\n4. Ulozit vypocet\n0. Ukoncit\n Vyber akci:")
                         .Validate(action =>
                         {
-                            if (action == 1 || action == 2 || action == 3 || action == 0)
+                            if (action == 1 || action == 2 || action == 3 || action == 4 || action == 0)
                             {
                                 return ValidationResult.Success();
                             }
                             else
                             {
-                                return ValidationResult.Error("[bold red]Neplatna akce. Pro zvoleni zadejte cislo akce:[/]");
+                                return ValidationResult.Error(
+                                    "[bold red]Neplatna akce. Pro zvoleni zadejte cislo akce:[/]");
                             }
                         }));
-                
+
                 switch (action)
                 {
                     case 1:
@@ -162,6 +161,10 @@ namespace SplatkovaKalkulacka
                     {
                         return Action.ChangeInterest;
                     }
+                    case 4:
+                    {
+                        return Action.Save;
+                    }
                     case 0:
                     {
                         return Action.Quit;
@@ -174,10 +177,11 @@ namespace SplatkovaKalkulacka
                     new SelectionPrompt<string>()
                         .Title("Vyberte akci:")
                         .PageSize(4)
-                        .AddChoices(new[] {
-                            "Zmenit vysi pujcky", "Zmenit pocet let splaceni", "Zmenit vysi uroku", "Ukoncit",
+                        .AddChoices(new[]
+                        {
+                            "Zmenit vysi pujcky", "Zmenit pocet let splaceni", "Zmenit vysi uroku", "Ulozit vypocet", "Ukoncit",
                         }));
-                
+
                 switch (action)
                 {
                     case "Zmenit vysi pujcky":
@@ -192,6 +196,10 @@ namespace SplatkovaKalkulacka
                     {
                         return Action.ChangeInterest;
                     }
+                    case "Ulozit vypocet":
+                    {
+                        return Action.Save;
+                    }
                     case "Ukoncit":
                     {
                         return Action.Quit;
@@ -202,37 +210,12 @@ namespace SplatkovaKalkulacka
             return Action.Quit;
         }
 
-        public static void UpdateTable(int owed, int years, double interest)
-        {
-            if (owed == 0)
-            {
-                throw new ArgumentOutOfRangeException("Vyse pujcky musi byt kladna");
-            }
-            
-            _innerTable.UpdateCell(0, 0, owed + " Kc");
-            _innerTable.UpdateCell(0, 1, years.ToString());
-            _innerTable.UpdateCell(0, 2, interest + "%");
-
-            if (owed == 0 || years == 0 || interest == 0)
-            {
-                _innerTable.UpdateCell(0, 3, "-");
-                _innerTable.UpdateCell(0, 4, "-");
-            }
-            else
-            {
-                double monthlyPayment = CalculateMonthly(owed, years, interest);
-                _innerTable.UpdateCell(0, 3, Math.Round(monthlyPayment, 3) + " Kc");
-                _innerTable.UpdateCell(0, 4, Math.Round(monthlyPayment * years * 12, 3) + " Kc");   
-            }
-            AnsiConsole.Clear();
-            AnsiConsole.Write(_table);
-        }
-
         private enum Action
         {
             ChangeOwed,
             ChangeYears,
             ChangeInterest,
+            Save,
             Quit
         }
     }
